@@ -1,4 +1,4 @@
-const teacherModel = require('../models/teachers.model')
+const TeacherModel = require('../models/teachers.model')
 const { handleError } = require('../utils')
 
 module.exports = {
@@ -6,6 +6,12 @@ module.exports = {
 }
 
 function getTeacherInfo (req, res) {
-
-
+   TeacherModel.findById(req.params.id)
+   .then(teacher => { 
+     res.json(teacher)
+     console.log('This is your teacher')
+   })
+    
+   .catch(err => ( console.error(err)
+   ))
 }
