@@ -10,8 +10,8 @@ const {
 
 router.get('/', getAllLessons)
 router.post('/', createLesson)
-router.get('/:id', getOneLesson)
-router.put('/:id', updateLesson)
-router.delete('/:id', deleteLesson)
+router.get('/:lessonId', getOneLesson)
+router.put('/:lessonId', updateLesson)
+router.delete('/:lessonId', deleteLesson)
 
 module.exports = router

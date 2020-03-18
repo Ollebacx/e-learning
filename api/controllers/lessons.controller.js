@@ -25,21 +25,21 @@ function createLesson (req, res) {
 
 function getOneLesson (req, res) {
   Lesson
-    .findById(req.params.id)
+    .findById(req.params.lessonId)
     .then(lesson => res.json(lesson))
     .catch((err) => handleError(err, res))
 }
 
 function updateLesson (req, res) {
   Lesson
-    .findByIdAndUpdate(req.params.id, req.body, { new: true })
+    .findByIdAndUpdate(req.params.lessonId, req.body, { new: true })
     .then(lesson => res.json(lesson))
     .catch((err) => handleError(err, res))
 }
 
 function deleteLesson (req, res) {
   Lesson
-    .deleteOne({ _id: req.params.id })
+    .deleteOne({ _id: req.params.lessonId })
     .then(response => res.json(response))
     .catch(err => handleError(err, res))
 }
