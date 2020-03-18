@@ -5,9 +5,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Name is required']
   },
-  lastname: String,
-  gitaccount: String,
-  telephone: Number,
+  lastName: String,
+  github: String,
+  mobile: Number,
   email: {
     type: String,
     required: [true, 'Email is required'],
@@ -23,12 +23,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  role: {
-    type: String,
-    enum: ['host', 'regular'],
-    required: false,
-    default: 'regular'
-  },
   birthDate: {
     type: Date,
     required: false
@@ -36,7 +30,8 @@ const userSchema = new mongoose.Schema({
   createdAt: {
     type: Number,
     default: Date.now() // Get a timestamp :)
-  }
+  },
+  photoURL: String
 })
 
 const userModel = mongoose.model('user', userSchema)
