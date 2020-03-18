@@ -5,9 +5,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Name is required']
   },
-  lastName: String,
-  github: String,
-  mobile: Number,
+  lastName: {
+    type: String,
+    required: [true, 'Last name is required']
+  },
   email: {
     type: String,
     required: [true, 'Email is required'],
@@ -25,6 +26,14 @@ const userSchema = new mongoose.Schema({
   },
   birthDate: {
     type: Date,
+    required: false
+  },
+  github: {
+    type: String,
+    required: false
+  },
+  mobile:{
+    type: Number,
     required: false
   },
   createdAt: {
