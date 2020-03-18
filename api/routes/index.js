@@ -1,15 +1,15 @@
 const router = require('express').Router()
-
-const usersRouter = require('./users.router')
-const authRouter = require('./auth.router')
-const teacherRouter = require('./teachers.router')
-const lessonsRouter = require('./lessons.router')
 const { authUser } = require('../utils') // Authenticated Route
 
-router.use('/users', usersRouter)
+const authRouter = require('./auth.router')
+const lessonsRouter = require('./lessons.router')
+const usersRouter = require('./users.router')
+const meRouter = require('./me.router')
+
 router.use('/auth', authRouter)
-router.use('/teachers', teacherRouter)
 router.use('/lessons', lessonsRouter)
+router.use('/users', usersRouter)
+router.use('/me', authUser, meRouter)
 
 router.get('/whoami', authUser, (req, res) => {
   res.send(`hi there! ${res.locals.user.name}`)
