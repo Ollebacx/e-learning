@@ -16,14 +16,13 @@ function signup (req, res) {
   UserModel
     .create({ ...req.body, password: bcrypt.hashSync(req.body.password, 10) })
     .then(() => {
-
       const token = jwt.sign(
         { email: req.body.email },
         process.env.SECRET, // TAKE SECRET KEY FROM .ENV
         { expiresIn: '1w' }
       )
 
-      return res.json({ token: token, email: req.body.email, firstName: req.body.firstName})
+      return res.json({ token: token, email: req.body.email, firstName: req.body.firstName })
     })
     .catch((err) => {
       res.status(403).json({ error: err })
