@@ -36,6 +36,7 @@ const userSchema = new mongoose.Schema({
     type: Number,
     required: false
   },
+  lessons: Array,
   createdAt: {
     type: Number,
     default: Date.now() // Get a timestamp :)

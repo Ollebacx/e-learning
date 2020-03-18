@@ -6,7 +6,12 @@ module.exports = {
     createLesson,
     getOneLesson,
     updateLesson,
-    deleteLesson
+    deleteLesson,
+    getMyLessons,
+    addMyLesson,
+    getMyLesson,
+    updateMyLesson,
+    deleteMyLesson
 }
 
 function getAllLessons (req,res) {
@@ -27,14 +32,14 @@ function getOneLesson (req,res) {
   Lesson
   .findById(req.params.id)
   .then(lesson => res.json(lesson))
-  .catch((err) => handleError(err, res)) 
+  .catch((err) => handleError(err, res))
 }
 
 function updateLesson (req,res) {
   Lesson
   .findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then(lesson => res.json(lesson))
-  .catch((err) => handleError(err, res)) 
+  .catch((err) => handleError(err, res))
 }
 
 function deleteLesson (req,res) {
@@ -42,4 +47,32 @@ function deleteLesson (req,res) {
   .deleteOne({ _id: req.params.id })
   .then(response => res.json(response))
   .catch(err => handleError(err, res))
-} 
+}
+
+
+function getMyLessons (req, res) {
+
+}
+
+
+
+function addMyLesson (req, res) {
+  Lesson
+
+}
+
+
+function getMyLesson (req, res) {
+
+}
+
+
+function updateMyLesson (req, res) {
+
+
+}
+
+
+function deleteMyLesson (req, res) {
+
+}
