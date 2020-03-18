@@ -18,9 +18,9 @@ router.get('/:id', getUserById)
 router.delete('/:id', deleteUserById)
 router.put('/:id', updateUser)
 
-router.get('/me', authUser, getMyLessons)
+router.get('/:id/lessons', getMyLessons)
 router.post('/:id/lessons', addMyLesson)
-router.get('/me/:id', authUser, getMyLesson)
+router.get('/:id/lessons/:lessonId', getMyLesson)
 router.put('/me/:id', authUser, updateMyLesson)
 router.delete('/me/:id', authUser, deleteMyLesson)
 

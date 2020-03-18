@@ -45,9 +45,12 @@ function updateUser (req, res) {
 }
 
 function getMyLessons (req, res) {
-
+  UserModel
+    .findById(req.params.id)
+    .populate('lessons')
+    .then(user => res.json(user.lessons))
+    .catch(err => handleError(err, res))
 }
-
 function addMyLesson (req, res) {
   UserModel
     .findById(req.params.id)
@@ -55,27 +58,18 @@ function addMyLesson (req, res) {
       user.lessons.push(req.body.lessonId)
       user.save()
         .then(res.json(user))
-        .catch(err => console.log(err))
+        .catch(err => handleError(err, res))
     })
 }
 
-/* const addFavMovToUser = (req, res) => {
-	const userId = req.params.userId
-	const favMovieId = req.body.favMovies
-	Users.findById(userId)
-		.then(user => {
-			user.favMovies.push(favMovieId)
-			user.save()
-				.then(res.json(user))
-				.catch(err => console.log(err))
-		})
-		.catch(err => console.log(err))
-}
- */
-
-
 function getMyLesson (req, res) {
-
+  UserModel
+    .findById(req.params.id)
+    .populate('lessons')
+    .then(user => {
+      res.json(user.lessons.filter(lesson => lesson._id == req.params.lessonId))
+    })
+    .catch(err => handleError(err, res))
 }
 
 function updateMyLesson (req, res) {
