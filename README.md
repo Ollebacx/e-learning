@@ -90,7 +90,8 @@ METHOD | URL                         | What does it do
 GET    | `api/me/lessons`            | Get User's Lessons (unstarted, ongoing, finished)
 POST   | `api/me/lessons/:lessonId`  | Add lesson to my Lessons (unstarted)
 GET    | `api/me/lessons/:lessonId`  | Return my lesson (with user progress)
-PUT    |
+PUT    | `api/me/lessons/:lessonId`  | Modify User's lesson (set progress)
+DELETE | `api/me/lessons/:lessonId`  | Delete User's lesson
 
 
 

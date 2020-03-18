@@ -19,6 +19,7 @@ function getAllLessons (req,res) {
 function createLesson (req,res) {
   Lesson
   .create(req.body)
+  .then(lesson => res.json(lesson))
   .catch((err) => handleError(err, res))
 }
 
@@ -26,12 +27,13 @@ function getOneLesson (req,res) {
   Lesson
   .findById(req.params.id)
   .then(lesson => res.json(lesson))
+  .catch((err) => handleError(err, res)) 
 }
 
 function updateLesson (req,res) {
   Lesson
   .findByIdAndUpdate(req.params.id, req.body, {new: true})
-  .then(res.send("updated"))
+  .then(lesson => res.json(lesson))
   .catch((err) => handleError(err, res)) 
 }
 
