@@ -1,4 +1,4 @@
-# Reboot BackendEnd Sample
+# Reboot ELearning Prokect
 
 ## Introduction
 
@@ -61,5 +61,78 @@ Available on:
   http://192.168.43.142:8080
 Hit CTRL-C to stop the server
 ```
+
+## API ROUTES
+
+### AUTHENTICATION ENDPOINTS
+
+METHOD | URL           | What does it do
+-------|---------------|---------------------------------
+POST   | `api/signup`  | Create a new account
+POST   | `api/login`   | Authenticates a user
+
+### LESSONS ENDPOINTS
+
+METHOD | URL                        | What does it do
+-------|----------------------------|---------------------------------
+GET    | `api/lessons`              | Get All Lessons
+POST   | `api/lessons`              | Create Lesson
+GET    | `api/lessons/:lessonId`    | Get One Lesson
+PUT    | `api/lessons/:lessonId`    | Update Lesson
+DELETE | `api/lessons/:lessonId`    | Delete Lesson
+
+### USER ENDPOINTS (Authenticated)
+
+All these endpoints require a `token` to be sent within the HTTP Headers.
+
+METHOD | URL                         | What does it do
+-------|-----------------------------|---------------------------------
+GET    | `api/me/lessons`            | Get User's Lessons (unstarted, ongoing, finished)
+POST   | `api/me/lessons/:lessonId`  | Add lesson to my Lessons (unstarted)
+GET    | `api/me/lessons/:lessonId`  | Return my lesson (with user progress)
+PUT    |
+
+
+
+
+
+## USER: /api/student
+
+- router.delete('/:id/lessons/:id, deleteUserLesson)
+- router.get('/:id/lessons/:id', getUserLesson)
+- router.put('/:id/lessons/:id', markAsCompleted)
+
+- router.get('/:id/lessons/:id', getNextLesson(&markAsCompleted))
+
+- router.get('/:id/settings', getUserSettings)
+- router.put('/:id/settings', editUserSettings)
+
+
+
+- alum
+- get (alumId)
+- post (alumId)
+- put (alumId)
+- delete (alumId)
+
+- get (alumId - lesson)
+- get (alumId - lessonId)
+- post (alumId - lessonId)
+- delete (alumId - lessonId)
+- put (alumId - lessonId)
+
+
+- lessons
+- get (lessonId)
+- get (lesson)
+- get (lessonId - teachers)
+- get (lessonId - tickets)
+
+- teachers
+- get (teacherId)
+
+- auth
+- post (signin)
+- post (login)
 
 Happy coding!
