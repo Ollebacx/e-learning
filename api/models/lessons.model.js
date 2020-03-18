@@ -9,10 +9,10 @@ const lessonSchema = new mongoose.Schema ({
   status: {
     type: String,
     enum: ['in_progress', 'to_start', 'completed'],
-    default: `to_start`
+    default: 'to_start'
   },
   duration: String,
-  difficult : {
+  difficulty: {
     type: String,
     enum: ['begginer', 'intermediate', 'advanced']
   },

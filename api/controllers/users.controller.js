@@ -73,7 +73,16 @@ function getMyLesson (req, res) {
 }
 
 function updateMyLesson (req, res) {
-
+  UserModel
+    .findById(req.params.id)
+    .populate('lessons')
+    .then(user => {
+      const myLesson = user.lessons.filter(lesson => lesson._id == req.params.lessonId)
+      myLesson.update({ status: 'in_progress' })
+        .then(update => res.json(update))
+        .catch(err => handleError(err, res))
+    })
+    .catch(err => handleError(err, res))
 }
 
 function deleteMyLesson (req, res) {

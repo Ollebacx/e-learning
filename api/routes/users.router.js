@@ -21,7 +21,7 @@ router.put('/:id', updateUser)
 router.get('/:id/lessons', getMyLessons)
 router.post('/:id/lessons', addMyLesson)
 router.get('/:id/lessons/:lessonId', getMyLesson)
-router.put('/me/:id', authUser, updateMyLesson)
+router.put('/:id/lessons/:lessonId', updateMyLesson)
 router.delete('/me/:id', authUser, deleteMyLesson)
 
 module.exports = router
