@@ -1,48 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Reboot API Front</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Reboot Virtual Academy</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">REBOOT TEMPLATE</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-      </ul>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+    <span class="col-11 offset container justify-content-between">
+      <a class="navbar-brand" href="#">Reboot Logo</a>
+
       <span class="navbar-text">
-        <a class="btn btn-primary" href="auth.html">LOGIN</a>
+        <a href="" class="btn btn-outline-info text-info pl-4 pr-4" data-toggle="modal"
+          data-target="#modalLoginForm">Login</a>
       </span>
+    </span>
+
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h3 class="modal-title w-100">Get into Reboot Virtual Academy</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3">
+            <form class="form-signin">
+              <div class="form-label-group">
+                <label for="login_email">Email address</label>
+                <input type="email" id="login_email" class="form-control mb-3" placeholder="name@example.com"
+                  required="" autofocus="">
+              </div>
+              <div class="form-label-group">
+                <label for="login_password">Password</label>
+                <input type="password" id="login_password" class="form-control mb-5" placeholder="··········"
+                  required="">
+              </div>
+              <button class="btn btn-lg btn-info btn-block" type="submit" id="btn-login">Log in</button>
+            </form>
+            <hr class="my-4">
+            <div class="row text-center col m-auto">
+              <div class="mb-3">New to Reboot?
+                <a href="" class="" data-dismiss="modal" aria-label="Close">Create an account by signing up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+
   </nav>
 
-  <div class="container">
+
+
+
+
+
+
+
+  <div class="container mtop">
     <div class="row">
-      <div class="col-12">
-        <div class="jumbotron">
-          <h1 class="display-4">REBOOT TODOs!</h1>
-          <p class="lead">Welcome to the ultimate TODO list</p>
-          <hr class="my-4">
-          <p>You can keep track of all your tasks and chores in a happy and productive way</p>
-          <a class="btn btn-primary btn-lg" href="auth.html" role="button">Authenticate</a>
+      <div class="col-11 offset d-flex justify-content-center">
+        <div class="jumbotron bg-transparent col-7">
+          <h1 class="display-4">We make full stack developers</h1>
+          <h2 class="lead">REB-ON is the new intensive learning platform online from Reboot Academy to become a tech
+            professional</h2>
+        </div>
+
+        <div class="jumbotron bg-white col-4 shadow">
+          <form class="form-signin">
+            <div class="form-label-group d-flex justify-content-between">
+              <span>
+                <label for="login_name">First Name</label>
+                <input type="firstName" id="login_firstName" class="form-control col-10 mb-3" placeholder="Name"
+                  required autofocus>
+              </span>
+              <span>
+                <label for="login_name">Last Name</label>
+                <input type="lastName" id="login_lastName" class="form-control col-10 mb-3" placeholder="Last name"
+                  required autofocus>
+              </span>
+            </div>
+
+            <div class="form-label-group">
+              <label for="login_email">Email address</label>
+              <input type="email" id="login_email" class="form-control mb-3" placeholder="name@example.com" required=""
+                autofocus="">
+            </div>
+
+            <div class="form-label-group">
+              <label for="login_password">Password</label>
+              <input type="password" id="login_password" class="form-control mb-5" placeholder="··········" required="">
+            </div>
+
+            <button class="btn btn-lg btn-info btn-block" type="submit" id="btn-login">Register</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
   <script src="scripts/index.js"></script>
 </body>
+
 </html>
