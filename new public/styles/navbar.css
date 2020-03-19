@@ -1,0 +1,110 @@
+* {
+  font-family: 'Roboto Slab', serif;
+}
+h1 {
+  font-weight:900;
+  color:rgb(32, 32, 32)1, 58, 58);
+  font-family:'Libre Franklin', sans-serif;
+  font-size:4rem;
+}
+.float-card{
+  border-radius: 2rem;
+  padding: 2rem;
+ }
+ .inner-shadow {
+  -moz-box-shadow:    inset 5px 5px 20px  #00000081;
+  -webkit-box-shadow: inset 5px 5px 20px  #00000081;
+  box-shadow:         inset 5px 5px 20px  #00000081;
+}
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+.vertical-nav {
+  min-width: 15rem;
+  width: 15rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+ /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);*/
+  transition: all 0.4s;
+}
+
+.page-content {
+  width: calc(100% - 15rem);
+  margin-left: 15rem;
+  transition: all 0.4s;
+  margin-top: 3rem;
+}
+
+/* for toggle behavior */
+
+#sidebar.active {
+  margin-left: -15rem;
+}
+
+#content.active {
+  width: 100%;
+  margin-left: 0;
+  margin-top: 3rem;
+}
+
+@media (max-width: 764px) {
+  #sidebar {
+    margin-left: -15rem;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+  #content.active {
+    margin-left: 15rem;
+    width: calc(100% - 15rem);
+    margin-top: 3rem;
+  }
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*
+*/
+
+body {
+  background: #ffffff;
+  min-height: calc(100vh - 3rem);
+  overflow-x: hidden;
+}
+.background{
+  background: #f3f3f3;
+  min-height: calc(100vh - 3rem);
+  overflow-x: hidden;
+  border-radius: 10rem 0rem 0rem 0rem;
+  background-image: url('./img/834.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.separator {
+  margin: 3rem 0;
+  border-bottom: 1px dashed #fff;
+}
+
+.text-uppercase {
+  letter-spacing: 0.1em;
+}
+
+.text-gray {
+  color: #aaa;
+}

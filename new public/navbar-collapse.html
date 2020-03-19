@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reboot API Front</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,300,400,600,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/navbar.css">
+</head>
+
+
+<body>
+  <!-- Vertical navbar -->
+  <div class="vertical-nav bg-white d-flex" id="sidebar">
+    <ul class="nav bg-white mb-0 align-content-center">
+      <li class="nav-item text-center col-12 p-4">
+          <img src="https://res.cloudinary.com/mhmd/image/upload/v1556074849/avatar-1_tcnd60.png" alt="..." width="65"
+            class="rounded-circle m-4">
+          <h2 class="m-0">Marcos</h2>
+          <!--<p class="font-weight-light text-muted mb-0">Web developer</p>-->
+      </li>
+
+      <li class="nav-item col-12 p-4 text-center">
+        <a href="#" class="nav-link text-dark bg-white">
+          <i class="fa fa-th-large text-primary fa-fw"></i>
+          <p><span class="glyphicon glyphicon-search"></span></p>
+        </a>
+      </li>
+      <li class="nav-item col-12 p-4 text-center">
+        <a href="#" class="nav-link text-dark">
+          <i class="fa fa-address-card text-primary fa-fw"></i>
+          <p><span class="glyphicon glyphicon-star"></span></p>
+        </a>
+      </li>
+      <li class="nav-item col-12 p-4 text-center">
+        <a href="#" class="nav-link text-dark ">
+          <i class="fa fa-cubes text-primary fa-fw"></i>
+          <p><span class="glyphicon glyphicon-cog"></span></p>
+        </a>
+      </li>
+      <li class="nav-item col-12 p-4 text-center">
+        <a href="#" class="nav-link text-dark">
+          <i class="fa fa-picture-o text-primary fa-fw"></i>
+          <p><span class="glyphicon glyphicon-off"></span></p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- End vertical navbar -->
+
+
+  <!-- Page content holder -->
+
+  <!-- Toggle button -->
+  <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-circle float-left fixed-top ml-2 mt-2 p-3"><span class="h3 glyphicon glyphicon-flash"></span></button>
+  <div class="page-content background inner-shadow" id="content">
+    <!-- Demo content -->
+    <div class="container-fluid mt-5">
+      <div class="row justify-content-center">
+
+
+      </div>
+    </div>
+  </div>
+  <!-- End demo content -->
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script src="./scripts/navbar.js"></script>
+</body>
+
+</html>
