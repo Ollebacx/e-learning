@@ -98,44 +98,7 @@ POST   | `me/lessons/:lessonId`  | Add lesson to my Lessons (unstarted)
 GET    | `me/lessons/:lessonId`  | Return my lesson (with user progress)
 PUT    | `me/lessons/:lessonId`  | Modify User's lesson (set progress)
 DELETE | `me/lessons/:lessonId`  | Delete User's lesson from My Lessons
-
-## USER: /api/student
-
-- router.delete('/:id/lessons/:id, deleteUserLesson)
-- router.get('/:id/lessons/:id', getUserLesson)
-- router.put('/:id/lessons/:id', markAsCompleted)
-
-- router.get('/:id/lessons/:id', getNextLesson(&markAsCompleted))
-
-- router.get('/:id/settings', getUserSettings)
-- router.put('/:id/settings', editUserSettings)
-
-
-
-- alum
-- get (alumId)
-- post (alumId)
-- put (alumId)
-- delete (alumId)
-
-- get (alumId - lesson)
-- get (alumId - lessonId)
-- post (alumId - lessonId)
-- delete (alumId - lessonId)
-- put (alumId - lessonId)
-
-
-- lessons
-- get (lessonId)
-- get (lesson)
-- get (lessonId - teachers)
-- get (lessonId - tickets)
-
-- teachers
-- get (teacherId)
-
-- auth
-- post (signin)
-- post (login)
+GET    | `me/profile`            | Get info from User (TODO)
+PUT    | `me/profile`            | Modify User info (TODO)
 
 Happy coding!
