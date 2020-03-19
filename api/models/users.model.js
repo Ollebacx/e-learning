@@ -36,11 +36,6 @@ const userSchema = new mongoose.Schema({
     type: Number,
     required: false
   },
-  lessons: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'lessons',
-    required: true
-  }],
   createdAt: {
     type: Number,
     default: Date.now() // Get a timestamp :)

@@ -1,15 +1,9 @@
 const mongoose = require('mongoose')
-const ticketSchema = require('../models/tickets.model')
 
-const lessonSchema = new mongoose.Schema ({
+const lessonSchema = new mongoose.Schema({
   title: {
     type: String,
     required: [true, 'Title is required']
-  },
-  status: {
-    type: String,
-    enum: ['in_progress', 'to_start', 'completed'],
-    default: 'to_start'
   },
   duration: String,
   difficulty: {
@@ -21,8 +15,7 @@ const lessonSchema = new mongoose.Schema ({
   overview: String,
   content: String,
   lessonURL: String,
-  lab: String,
-  qa: [ticketSchema]
+  lab: String
 })
 
 const lessonModel = mongoose.model('lessons', lessonSchema)
