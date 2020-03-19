@@ -14,10 +14,6 @@ document.getElementById('btn-signup').addEventListener('click', (event) => {
 
   api
     .post('auth/signup', newUser)
-    //
-    // Aqui es donde el backend crea el usuario
-    // crea el token y me lo devuelve
-    //
     .then(function (response) {
       localStorage.clear()
       localStorage.setItem('token', response.data.token)
@@ -32,8 +28,8 @@ document.getElementById('btn-signup').addEventListener('click', (event) => {
 
 document.getElementById('btn-login').addEventListener('click', (event) => {
   const newUser = {
-    user_email: document.getElementById('login_email').value,
-    user_password: document.getElementById('login_password').value
+    email: document.getElementById('login_email').value,
+    password: document.getElementById('login_password').value
   }
 
   api
@@ -42,10 +38,11 @@ document.getElementById('btn-login').addEventListener('click', (event) => {
       if (response.data.error) {
         alert('WRONG PASSWORD')
       } else {
+        localStorage.clear()
         localStorage.setItem('token', response.data.token)
-        localStorage.setItem('name', response.data.username)
+        localStorage.setItem('fistName', response.data.firstName)
         localStorage.setItem('email', response.data.email)
-        location.assign('todos.html')
+        location.assign('explore.lessons.html')
       }
     })
     .catch(function (error) {
