@@ -1,7 +1,7 @@
 (function () {
   if (localStorage.getItem('token')) {
-    console.log('user authenticated')
+    document.getElementById('username').innerText = localStorage.getItem('firstName')
   } else {
-    console.log('user not authenticated')
+    location.href = 'index.html'
   }
 })()

@@ -4,18 +4,12 @@
     timeout: 1000
   })
 
-  if (localStorage.getItem('token')) {
-    document.getElementById('username').innerText = localStorage.getItem('firstName')
-  } else {
-    location.href = 'auth.html'
-  }
-
   document.getElementById('btn-logout').addEventListener('click', () => {
     localStorage.clear()
     location.assign('index.html')
   })
 
-/*   function createLessons(lesson) {
+  /*   function createLessons(lesson) {
     const lessonsUL = document.getElementById('lessonsUL')
     const lessonLI = document.createElement('li')
     lessonLI.innerHTML = `
@@ -38,5 +32,4 @@
       .then(res => res.data.forEach(lesson => {
        createLessons(lesson)
   }) */
-
 })()
