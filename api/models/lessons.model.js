@@ -6,10 +6,11 @@ const lessonSchema = new mongoose.Schema({
     required: [true, 'Title is required']
   },
   logoText: String,
+  color: String,
   duration: String,
   difficulty: {
     type: String,
-    enum: ['begginer', 'intermediate', 'advanced']
+    enum: ['Begginer', 'Intermediate', 'Advanced']
   },
   description: String,
   overview: String,
