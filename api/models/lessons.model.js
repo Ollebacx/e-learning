@@ -5,12 +5,12 @@ const lessonSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Title is required']
   },
+  logoText: String,
   duration: String,
   difficulty: {
     type: String,
     enum: ['begginer', 'intermediate', 'advanced']
   },
-  photoURL: String,
   description: String,
   overview: String,
   content: String,
