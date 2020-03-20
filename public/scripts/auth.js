@@ -19,7 +19,7 @@ document.getElementById('btn-signup').addEventListener('click', (event) => {
       localStorage.setItem('token', response.data.token)
       localStorage.setItem('email', response.data.email)
       localStorage.setItem('firstName', response.data.firstName)
-      location.assign('explore.lessons.html')
+      location.assign('explore.html')
     })
     .catch(function (error) {
       console.log(error.response)
@@ -40,9 +40,9 @@ document.getElementById('btn-login').addEventListener('click', (event) => {
       } else {
         localStorage.clear()
         localStorage.setItem('token', response.data.token)
-        localStorage.setItem('fistName', response.data.firstName)
+        localStorage.setItem('firstName', response.data.firstName)
         localStorage.setItem('email', response.data.email)
-        location.assign('explore.lessons.html')
+        location.assign('explore.html')
       }
     })
     .catch(function (error) {
