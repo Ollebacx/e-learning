@@ -7,7 +7,7 @@
   if (localStorage.getItem('token')) {
     document.getElementById('username').innerText = localStorage.getItem('firstName')
   } else {
-    location.href = 'auth.html'
+    location.href = 'index.html'
   }
 
   document.getElementById('btn-logout').addEventListener('click', () => {
