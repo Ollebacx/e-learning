@@ -4,9 +4,9 @@
   padding: 2rem;
  }
  .inner-shadow {
-  -moz-box-shadow:    inset 5px 5px 20px  #00000081;
-  -webkit-box-shadow: inset 5px 5px 20px  #00000081;
-  box-shadow:         inset 5px 5px 20px  #00000081;
+  -moz-box-shadow:    inset 5px 5px 20px  #b6b6b681;
+  -webkit-box-shadow: inset 5px 5px 20px  #b6b6b681;
+  box-shadow:         inset 5px 5px 20px  #b6b6b681;
 }
 /*
 *
@@ -32,13 +32,13 @@
   top: 40px;
   left: 0;
  /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);*/
-  transition: all 0.4s;
+  transition: all 0.8s;
 }
 
 .page-content {
   width: calc(100% - 20rem);
   margin-left: 20rem;
-  transition: all 0.4s;
+  transition: all 0.8s;
   margin-top: 40px;
 }
 
@@ -59,14 +59,14 @@
 #explore.active {
   display:none;
 }
-#lessons.active {
+#mylessons.active {
   display:none;
 }
 #logout.active {
   display:none;
 }
 #img.active{
-
+  width: 40px;
 }
 @media (max-width: 764px) {
   #sidebar {

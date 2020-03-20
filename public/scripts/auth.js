@@ -19,6 +19,7 @@ document.getElementById('btn-signup').addEventListener('click', (event) => {
       localStorage.setItem('token', response.data.token)
       localStorage.setItem('email', response.data.email)
       localStorage.setItem('firstName', response.data.firstName)
+      localStorate.setItem('photoURL', response.data.photoURL)
       location.assign('explore.html')
     })
     .catch(function (error) {
@@ -42,6 +43,7 @@ document.getElementById('btn-login').addEventListener('click', (event) => {
         localStorage.setItem('token', response.data.token)
         localStorage.setItem('firstName', response.data.firstName)
         localStorage.setItem('email', response.data.email)
+        localStorage.setItem('photoURL', response.data.photoURL)
         location.assign('explore.html')
       }
     })

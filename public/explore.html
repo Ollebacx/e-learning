@@ -11,139 +11,62 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/navbar.css">
 </head>
 <body>
-  <ul id="lessonsUL">
-  </ul>
-<!-- <div class="horizontal-nav">
-  <a class="navbar-brand" href="#"><h3 class="text-info font-weight-bold ml-4 mt-4">Reboot Academy</h3></a>
+
+ <!-- Top navbar -->
+ <div class="horizontal-nav">
+  <a class="navbar-brand" href="#"><h4 class="text-info font-weight-bold ml-4 mt-1">Reboot Academy</h4></a>
 </div>
+<!-- Vertical navbar -->
 <div class="vertical-nav bg-white d-flex align-items-start" id="sidebar">
   <div class="nav bg-white mb-0 align-content-start col-12">
     <div class="nav-item text-center col-12 p-4">
-      <img src="https://res.cloudinary.com/mhmd/image/upload/v1556074849/avatar-1_tcnd60.png" alt="..." width="65"
-      class="rounded-circle m-4" id="img">
+      <a href="./profile.html">
+      <img id="userphoto" alt="..." width="65"
+      class="rounded-circle m-4">
       <h4 id="name" class="m-0">Hello <span id="username"></span></h4>
+     </a> <!--<p class="font-weight-light text-muted mb-0">Web developer</p>-->
     </div>
+
     <div class="nav-item col-12 p-4 text-center">
-      <a href="./explore.html" class="nav-link text-dark bg-white">
-        <span class="glyphicon glyphicon-globe m-4 "></span> <h4 id="explore">Explore</h4>
+      <a href="./explore.html" class="btn nav-link text-dark">
+        <span class="glyphicon glyphicon-globe display-4 m-4"></span> <h4 id="explore">Explore</h4>
       </a>
     </div>
-    <div class="nav-item col-12 p-4 text-center">
-      <a href="./lessons.html" class="nav-link text-dark">
-      <span class="glyphicon glyphicon-record m-4"></span><h4 id="lessons">My Lessons</h4>
+    <div class="nav-item col-12 p-4 text-center elem-sidebar">
+      <a href="./mylessons.html" class="btn nav-link text-dark">
+      <span class="glyphicon glyphicon-record display-4 m-4" ></span><h4 id="mylessons">My Lessons</h4>
     </a>
   </div>
   <div class="nav-item col-12 p-4 text-center">
-    <a href="" class="nav-link text-dark" id="btn-logout">
-      <span class="glyphicon glyphicon-off m-4 d-inline"></span><h4 id="logout">Log out</h4>
+    <a id="btn-logout" class="btn nav-link text-dark" >
+      <span class="glyphicon glyphicon-off display-4 m-4 d-inline"></span><h4 id="logout">Log out</h4>
     </a>
   </div>
 </div>
-<button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-circle ml-2 mt-2 p-3 col"><span class="h3 glyphicon glyphicon-transfer"></span></button>
+<!-- Toggle button -->
+<button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-circle ml-2 mt-2 p-3 col"><span class="display-6 glyphicon glyphicon-transfer"></span></button>
 </div>
+<!-- End vertical navbar -->
+
+
+<!-- Page content holder -->
 <div class="page-content background inner-shadow" id="content">
-<div class="container-fluid mt-5">
-  <div class="row justify-content-center">
 
-    <div class="container">
-      <div class="d-flex bg-white shadow shadow mt-5">
-        <div class="col-2 ml bg-warning d-flex justify-content-center align-items-center"><h1 class="font-weight-bold display-2">JS</h1></div>
-        <div id="info" class="col-10">
-          <h4 class="card-title font-weight-bold" id="title">ES-6</h4>
-          <p id="description">We were kids in JavaScript until now. Its time to grow up and writing less code</p>
-          <span class="d-flex align-items-center mb-3">
-            <span class="glyphicon glyphicon-dashboard mr-2 mb-1"></span><h5 class="mr-5" id="hours">Hours 3-4</h5>
-            <span class="glyphicon glyphicon-signal mr-2 mb-1"></span><h5 id="difficulty">Beginners</h5>
-            <div class="col d-flex justify-content-end"><button type="button" class="btn btn-warning pl-5 pr-5 text-dark">Add</button></div>
-          </span>
-        </div>
-      </div>
-    <div class="d-flex bg-white shadow mt-5">
-        <div class="col-2 ml bg-warning d-flex justify-content-center align-items-center"><h1 class="font-weight-bold display-2">JS</h1></div>
-        <div id="info" class="col-10">
-          <h4 class="card-title font-weight-bold">ES-6</h4>
-          <p>We were kids in JavaScript until now. Its time to grow up and writing less code</p>
-          <span class="d-flex align-items-center mb-3">
-            <span class="glyphicon glyphicon-dashboard mr-2 mb-1"></span><h5 class="mr-5">Hours 3-4</h5>
-            <span class="glyphicon glyphicon-signal mr-2 mb-1"></span><h5>Beginners</h5>
-            <div class="col d-flex justify-content-end"><button type="button" class="btn btn-warning pl-5 pr-5 text-dark">Add</button></div>
-          </span>
-        </div>
-      </div>
-      <div class="d-flex bg-white shadow shadow mt-5">
-        <div class="col-2 ml bg-warning d-flex justify-content-center align-items-center"><h1 class="font-weight-bold display-2">JS</h1></div>
-        <div id="info" class="col-10">
-          <h4 class="card-title font-weight-bold">ES-6</h4>
-          <p>We were kids in JavaScript until now. Its time to grow up and writing less code</p>
-          <span class="d-flex align-items-center mb-3">
-            <span class="glyphicon glyphicon-dashboard mr-2 mb-1"></span><h5 class="mr-5">Hours 3-4</h5>
-            <span class="glyphicon glyphicon-signal mr-2 mb-1"></span><h5>Beginners</h5>
-            <div class="col d-flex justify-content-end"><button type="button" class="btn btn-warning pl-5 pr-5 text-dark">Add</button></div>
-          </span>
-        </div>
-      </div>
-      <div class="d-flex bg-white shadow shadow mt-5">
-        <div class="col-2 ml bg-warning d-flex justify-content-center align-items-center"><h1 class="font-weight-bold display-2">JS</h1></div>
-        <div id="info" class="col-10">
-          <h4 class="card-title font-weight-bold">ES-6</h4>
-          <p>We were kids in JavaScript until now. Its time to grow up and writing less code</p>
-          <span class="d-flex align-items-center mb-3">
-            <span class="glyphicon glyphicon-dashboard mr-2 mb-1"></span><h5 class="mr-5">Hours 3-4</h5>
-            <span class="glyphicon glyphicon-signal mr-2 mb-1"></span><h5>Beginners</h5>
-            <div class="col d-flex justify-content-end"><button type="button" class="btn btn-warning pl-5 pr-5 text-dark">Add</button></div>
-          </span>
-        </div>
-      </div>
-</div>
+<!-- Demo content -->
+
+<div class="content inner-shadow bg-light rounded-corner">
+  <div class="container justify-content-end" id="lessons">
+    <!-- LESSON -->
   </div>
 </div>
-</div> -->
 
 
-  <nav class="navbar navbar-light bg-white rounded-0">
-    <span class="col container justify-content-start">
-      <a class="navbar-brand text-info font-weight-bold ml-4 mt-4" href="#">Reboot Logo</a>
-    </span>
-  </nav>
-  <div id="wrapper">
-    <div class="sidebar bg-white">
-      <a href="#" id="resize" class="glyphicon glyphicon-transfer text-info bg-light rounded-circle p-3 shadow-sm mr-4 float-right"></a>
-      <div class="nav-item col text-center">
+</div>
+<!-- End demo content -->
 
-        <a href="./profile.html" class="mt-5 hover nav-link text-dark">
-          <img src="https://res.cloudinary.com/mhmd/image/upload/v1556074849/avatar-1_tcnd60.png" alt="profile-photo" a href="#"
-          class="rounded-circle" width="75">
-          <p class="h4 menu-text">Hello <span id="username"></span></p>
-        </a>
-      </div>
-      <div class="nav-item col">
-        <a href="./explore.html" class="hover nav-link text-dark d-flex justify-content-center align-items-center">
-          <span class="glyphicon glyphicon-globe display-4 m-4"> </span>
-          <p class="h4 menu-text">Explore</p>
-        </a>
-      </div>
-      <div class="nav-item col">
-        <a href="#" class="hover nav-link text-dark d-flex justify-content-center align-items-center">
-          <span class="glyphicon glyphicon-record display-4 m-4"></span>
-          <p class="h4 menu-text">My Courses</p>
-        </a>
-      </div>
-      <div class="nav-item col">
-        <a id="btn-logout" class="btn hover nav-link text-dark block d-flex justify-content-center align-items-center">
-          <span class="glyphicon glyphicon-log-out display-4 m-4"></span>
-          <p class="h4 menu-text">Log out</p>
-        </a>
-      </div>
-    </div>
-    <div class="content inner-shadow bg-light rounded-corner">
-      <div class="container" id="lessons">
-        <!-- LESSON -->
-      </div>
-    </div>
-  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
