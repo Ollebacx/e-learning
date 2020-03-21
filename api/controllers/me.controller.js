@@ -1,4 +1,3 @@
-const User = require('../models/users.model')
 const UserLesson = require('../models/userLesson.model')
 
 const { handleError } = require('../utils')

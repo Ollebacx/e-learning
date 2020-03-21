@@ -38,7 +38,7 @@ const userSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Number,
-    default: Date.now() // Get a timestamp :)
+    default: Date.now()
   },
   photoURL: String
 })

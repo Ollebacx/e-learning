@@ -8,7 +8,7 @@ const meRouter = require('./me.router')
 
 router.use('/auth', authRouter)
 router.use('/lessons', lessonsRouter)
-router.use('/users', usersRouter)
+router.use('/users', authUser, usersRouter)
 router.use('/me', authUser, meRouter)
 
 router.get('/whoami', authUser, (req, res) => {

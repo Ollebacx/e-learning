@@ -5,12 +5,7 @@ module.exports = {
   getAllUsers,
   getUserById,
   deleteUserById,
-  updateUser,
-  getMyLessons,
-  addMyLesson,
-  getMyLesson,
-  updateMyLesson,
-  deleteMyLesson
+  updateUser
 }
 
 function getAllUsers (req, res) {
@@ -42,49 +37,4 @@ function updateUser (req, res) {
     })
     .then(response => res.json(response))
     .catch((err) => handleError(err, res))
-}
-
-function getMyLessons (req, res) {
-  UserModel
-    .findById(req.params.id)
-    .populate('lessons')
-    .then(user => res.json(user.lessons))
-    .catch(err => handleError(err, res))
-}
-function addMyLesson (req, res) {
-  UserModel
-    .findById(req.params.id)
-    .then(user => {
-      user.lessons.push(req.body.lessonId)
-      user.save()
-        .then(res.json(user))
-        .catch(err => handleError(err, res))
-    })
-}
-
-function getMyLesson (req, res) {
-  UserModel
-    .findById(req.params.id)
-    .populate('lessons')
-    .then(user => {
-      res.json(user.lessons.filter(lesson => lesson._id == req.params.lessonId))
-    })
-    .catch(err => handleError(err, res))
-}
-
-function updateMyLesson (req, res) {
-  UserModel
-    .findById(req.params.id)
-    .populate('lessons')
-    .then(user => {
-      const myLesson = user.lessons.filter(lesson => lesson._id == req.params.lessonId)
-      myLesson.update({ status: 'in_progress' })
-        .then(update => res.json(update))
-        .catch(err => handleError(err, res))
-    })
-    .catch(err => handleError(err, res))
-}
-
-function deleteMyLesson (req, res) {
-
 }
