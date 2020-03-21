@@ -23,7 +23,9 @@ function getUserLesson (req, res) {
       user: res.locals.user._id,
       lesson: req.params.lessonId
     })
-    .then(lesson => res.json(lesson))
+    .then(lesson => {
+      res.json(lesson)
+    })
     .catch((err) => handleError(err, res))
 }
 
@@ -38,6 +40,19 @@ function updateUserLesson (req, res) {
     .then(lesson => res.json(lesson))
     .catch((err) => handleError(err, res))
 }
+
+/* function updateUserLesson (req, res) {
+  UserModel
+    .findById(req.params.id)
+    .populate('lessons')
+    .then(user => {
+      const myLesson = user.lessons.filter(lesson => lesson._id == req.params.lessonId)
+      myLesson.update({ status: 'in_progress' })
+        .then(update => res.json(update))
+        .catch(err => handleError(err, res))
+    })
+    .catch(err => handleError(err, res))
+} */
 
 function addLessonToUser (req, res) {
   UserLesson

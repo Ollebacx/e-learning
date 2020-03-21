@@ -24,9 +24,6 @@ function addLesson (id) {
   api
     .post(`me/lessons/${id}`, null,
       { headers: { token: localStorage.getItem('token') } })
-    .then(response => {
-      console.log(response)
-    })
 }
 
 (function () {
